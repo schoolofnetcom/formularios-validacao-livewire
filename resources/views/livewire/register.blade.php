@@ -9,13 +9,13 @@
 
         <div class="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
             <div class="bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10">
-                <form wire:submit.prevent="submit">
+                <form wire:submit.prevent="register">
                     <div>
                         <label for="name" class="block text-sm font-medium leading-5 text-gray-700">
                             Nome
                         </label>
                         <div class="mt-1 rounded-md shadow-sm">
-                            <input wire:model="name" id="name" type="name" required class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md placeholder-gray-400 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 transition duration-150 ease-in-out sm:text-sm sm:leading-5" />
+                            <input wire:model="name" id="name" type="name" class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md placeholder-gray-400 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 transition duration-150 ease-in-out sm:text-sm sm:leading-5" />
                         </div>
                     </div>
 
@@ -24,7 +24,7 @@
                             Email
                         </label>
                         <div class="mt-1 rounded-md shadow-sm">
-                            <input wire:model="email" id="email" type="email" required class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md placeholder-gray-400 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 transition duration-150 ease-in-out sm:text-sm sm:leading-5" />
+                            <input wire:model="email" id="email" type="email" class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md placeholder-gray-400 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 transition duration-150 ease-in-out sm:text-sm sm:leading-5" />
                         </div>
                     </div>
 
@@ -33,7 +33,7 @@
                             Senha
                         </label>
                         <div class="mt-1 rounded-md shadow-sm">
-                            <input wire:model="password" id="password" type="password" required class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md placeholder-gray-400 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 transition duration-150 ease-in-out sm:text-sm sm:leading-5" />
+                            <input wire:model="password" id="password" type="password" class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md placeholder-gray-400 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 transition duration-150 ease-in-out sm:text-sm sm:leading-5" />
                         </div>
                     </div>
 
@@ -42,7 +42,7 @@
                             Confirmação de senha
                         </label>
                         <div class="mt-1 rounded-md shadow-sm">
-                            <input wire:model="confirmPassword" id="confirm-password" type="password" required class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md placeholder-gray-400 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 transition duration-150 ease-in-out sm:text-sm sm:leading-5" />
+                            <input wire:model="confirmPassword" id="confirm-password" type="password" class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md placeholder-gray-400 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 transition duration-150 ease-in-out sm:text-sm sm:leading-5" />
                         </div>
                     </div>
 
