@@ -15,7 +15,12 @@
                             Nome
                         </label>
                         <div class="mt-1 rounded-md shadow-sm">
-                            <input wire:model="name" id="name" type="name" class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md placeholder-gray-400 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 transition duration-150 ease-in-out sm:text-sm sm:leading-5" />
+                            <input wire:model="name" id="name" type="text" class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md placeholder-gray-400 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 transition duration-150 ease-in-out sm:text-sm sm:leading-5" />
+                            @if($errors->has('name'))
+                                <p class="text-red-500 text-xs p-2">
+                                    {{ $errors->first('name') }}
+                                </p>
+                            @endif
                         </div>
                     </div>
 
@@ -24,7 +29,12 @@
                             Email
                         </label>
                         <div class="mt-1 rounded-md shadow-sm">
-                            <input wire:model="email" id="email" type="email" class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md placeholder-gray-400 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 transition duration-150 ease-in-out sm:text-sm sm:leading-5" />
+                            <input wire:model="email" id="email" type="text" class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md placeholder-gray-400 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 transition duration-150 ease-in-out sm:text-sm sm:leading-5" />
+                            @if($errors->has('email'))
+                                <p class="text-red-500 text-xs p-2">
+                                    {{ $errors->first('email') }}
+                                </p>
+                            @endif
                         </div>
                     </div>
 
@@ -34,15 +44,20 @@
                         </label>
                         <div class="mt-1 rounded-md shadow-sm">
                             <input wire:model="password" id="password" type="password" class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md placeholder-gray-400 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 transition duration-150 ease-in-out sm:text-sm sm:leading-5" />
+                            @if($errors->has('password'))
+                                <p class="text-red-500 text-xs p-2">
+                                    {{ $errors->first('password') }}
+                                </p>
+                            @endif
                         </div>
                     </div>
 
                     <div class="mt-6">
-                        <label for="confirm-password" class="block text-sm font-medium leading-5 text-gray-700">
+                        <label for="password_confirmation" class="block text-sm font-medium leading-5 text-gray-700">
                             Confirmação de senha
                         </label>
                         <div class="mt-1 rounded-md shadow-sm">
-                            <input wire:model="confirmPassword" id="confirm-password" type="password" class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md placeholder-gray-400 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 transition duration-150 ease-in-out sm:text-sm sm:leading-5" />
+                            <input wire:model="password_confirmation" id="password_confirmation" type="password" class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md placeholder-gray-400 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 transition duration-150 ease-in-out sm:text-sm sm:leading-5" />
                         </div>
                     </div>
 
