@@ -12,7 +12,7 @@ class Register extends Component
     public $confirmPassword;
 
     public function submit() {
-        // dd('estou dentro do método');
+        dd('estou dentro do submit');
     }
 
     public function render()
