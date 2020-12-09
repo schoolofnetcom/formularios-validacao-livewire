@@ -26,6 +26,37 @@ class Register extends Component
         ]);
     }
 
+    // public function updated($field) {
+    //     if($field == 'email') {
+    //         // faça alguma coisa
+    //     }
+
+    //     switch ($field) {
+    //         case 'email':
+    //             # code...
+    //             break;
+
+    //         default:
+    //             # code...
+    //             break;
+    //     }
+    // }
+
+    public function updatedEmail() {
+        $this->validate(['email' => 'unique:users']);
+    }
+
+    public function updatedPassword() {
+        $this->validate(['password' => 'min:8']);
+    }
+
+    public function updatedPasswordConfirmation() {
+        $this->validate([
+            'password_confirmation' => 'min:8',
+            'password' => 'confirmed'
+        ]);
+    }
+
     public function render()
     {
         return view('livewire.register');
